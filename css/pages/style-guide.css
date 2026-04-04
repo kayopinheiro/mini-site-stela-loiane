@@ -1,0 +1,126 @@
+/* ============================================================
+   STELA LOIANE STUDIO — Style Guide Page Additions
+   ============================================================ */
+
+.sg-navbar-preview {
+  width: 100%;
+  max-width: 375px;
+  min-height: 812px;
+  position: relative;
+  border-radius: var(--radius-md);
+  background: linear-gradient(90deg, rgba(2, 2, 2, 0.95) 0%, rgba(12, 12, 12, 0.95) 100%);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--shadow-md);
+}
+
+.sg-navbar {
+  position: relative;
+  z-index: 2;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-24);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.sg-navbar__logo {
+  display: flex;
+  align-items: center;
+}
+
+.sg-navbar__logo img {
+  width: 154px;
+  height: 31px;
+}
+
+.sg-navbar__toggle {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-advantageous);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.sg-navbar__toggle span {
+  width: 16px;
+  height: 1.8px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-white);
+  transition: transform var(--transition-base), opacity var(--transition-base);
+}
+
+.sg-navbar__mobile-menu {
+  position: absolute;
+  top: 88px;
+  right: 0;
+  width: 100%;
+  height: calc(100% - 88px);
+  min-height: 0;
+  background-color: rgba(2, 2, 2, 1);
+  padding: var(--space-20) var(--space-24) var(--space-24);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0;
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform var(--transition-slow), opacity var(--transition-base);
+}
+
+.sg-navbar-preview.is-open .sg-navbar__mobile-menu {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sg-navbar-preview.is-open .sg-navbar__toggle span:nth-child(1) {
+  transform: translateY(4.8px) rotate(45deg);
+}
+
+.sg-navbar-preview.is-open .sg-navbar__toggle span:nth-child(2) {
+  opacity: 0;
+}
+
+.sg-navbar-preview.is-open .sg-navbar__toggle span:nth-child(3) {
+  transform: translateY(-4.8px) rotate(-45deg);
+}
+
+.sg-navbar__mobile-links {
+  width: 100%;
+  margin-block: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.sg-navbar__mobile-links a {
+  color: var(--color-white);
+  font-size: clamp(40px, 11vw, var(--text-h2));
+  font-weight: var(--fw-semibold);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  width: 100%;
+  text-align: center;
+  padding: var(--space-16) var(--space-16);
+  border-radius: var(--radius-md);
+}
+
+.sg-navbar__mobile-links a + a {
+  border-top: 0.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.sg-navbar__mobile-menu .btn {
+  margin-top: auto;
+  width: 100%;
+  min-height: 56px;
+  font-size: var(--text-body);
+  border-radius: var(--radius-md);
+}

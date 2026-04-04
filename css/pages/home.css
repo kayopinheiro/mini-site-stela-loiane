@@ -1,0 +1,446 @@
+/* ============================================================
+   STELA LOIANE STUDIO — Home (index.html)
+   Mobile First — 375px → 768px → 1280px
+   ============================================================ */
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+  background-color: var(--color-black-hole);
+  position: relative;
+  min-height: 100svh;
+  display: block;
+  padding-top: 360px;
+  padding-bottom: var(--space-64);
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, #000000 0%, rgba(0, 0, 0, 0.5) 12%, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.5) 50%, #000000 100%);
+  z-index: 1;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--space-32);
+}
+
+.hero__copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.hero__overline {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--font-body);
+  font-size: var(--text-overline);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0;
+  text-transform: uppercase;
+  line-height: 1.5;
+  color: var(--color-white);
+  width: max-content;
+}
+
+.hero__diamond {
+  color: var(--color-turquoise-chalk);
+  font-size: 12px;
+  line-height: 1;
+}
+
+.hero__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  line-height: var(--lh-h2-h3);
+  color: var(--color-white);
+  letter-spacing: 0;
+}
+
+.hero__title-accent {
+  display: block;
+  color: var(--color-turquoise-chalk);
+  font-size: var(--text-h1);
+  line-height: var(--lh-h2-h3);
+}
+
+.hero__desc {
+  font-size: var(--text-body);
+  color: var(--gray-50);
+  line-height: var(--lh-body-lg);
+}
+
+.hero__cta {
+  min-height: 56px;
+  border-radius: var(--radius-md);
+  font-size: var(--text-body);
+}
+
+.hero__cta .btn__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.hero__scroll {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-8);
+}
+
+.hero__scroll-icon {
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    min-height: 980px;
+    padding-top: 420px;
+    padding-bottom: var(--space-80);
+  }
+
+  .hero__content {
+    max-width: 560px;
+  }
+
+  .hero__title {
+    font-size: var(--text-h1);
+  }
+
+  .hero__title-accent {
+    font-size: clamp(var(--text-h1), 6.2vw, var(--text-display-2));
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    min-height: 1024px;
+    padding-top: 460px;
+    padding-bottom: var(--space-96);
+  }
+
+  .hero__content {
+    max-width: 640px;
+  }
+
+  .hero__title {
+    font-size: clamp(var(--text-h2), 4.8vw, var(--text-display-2));
+  }
+
+  .hero__title-accent {
+    font-size: clamp(var(--text-h1), 5.4vw, var(--text-display-1));
+  }
+
+  .hero__scroll {
+    justify-content: flex-start;
+  }
+}
+
+/* ============================================================
+   SOBRE
+   ============================================================ */
+
+.sobre {
+  padding-block: var(--space-56);
+}
+
+.sobre__title {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 9vw, var(--text-h2));
+  line-height: 1.12;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-24);
+}
+
+.sobre__title-accent {
+  display: block;
+  color: var(--color-advantageous);
+}
+
+.sobre__desc {
+  font-size: var(--text-body);
+  color: var(--color-text);
+  line-height: var(--lh-body);
+  margin-bottom: var(--space-40);
+}
+
+@media (min-width: 768px) {
+  .sobre {
+    padding-block: var(--space-96);
+  }
+
+  .sobre__title {
+    font-size: clamp(40px, 5vw, var(--text-h2));
+  }
+
+  .sobre__desc {
+    max-width: 640px;
+  }
+}
+
+/* ============================================================
+   SERVIÇOS
+   ============================================================ */
+
+.servicos {
+  background-color: var(--color-white);
+  padding-block: var(--space-56);
+}
+
+.section-overline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-advantageous);
+  margin-bottom: var(--space-16);
+}
+
+.diamond {
+  color: var(--color-turquoise-chalk);
+  font-size: 8px;
+  line-height: 1;
+}
+
+.servicos__title {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 9vw, var(--text-h2));
+  line-height: 1.12;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-32);
+}
+
+.servicos__title-accent {
+  display: block;
+  color: var(--color-advantageous);
+}
+
+/* Cards */
+.servicos__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  margin-bottom: var(--space-32);
+}
+
+.servico-card {
+  background-color: var(--gray-50);
+  border-radius: var(--radius-lg);
+  padding: var(--space-24);
+}
+
+.servico-card .tag {
+  margin-bottom: var(--space-16);
+}
+
+.servico-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h5);
+  line-height: var(--lh-h4-h5);
+  color: var(--color-text);
+  margin-bottom: var(--space-8);
+}
+
+.servico-card__desc {
+  font-size: var(--text-body-sm);
+  color: var(--color-text-muted);
+  line-height: var(--lh-body);
+}
+
+@media (min-width: 768px) {
+  .servicos {
+    padding-block: var(--space-96);
+  }
+
+  .servicos__list {
+    flex-direction: row;
+    gap: var(--space-24);
+    margin-bottom: var(--space-48);
+  }
+
+  .servico-card {
+    flex: 1;
+  }
+}
+
+/* ============================================================
+   AGENDAMENTO
+   ============================================================ */
+
+.agendamento {
+  background-color: var(--gray-50);
+  padding-block: var(--space-56);
+}
+
+.agendamento__title {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 9vw, var(--text-h2));
+  line-height: 1.12;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
+  margin-bottom: var(--space-40);
+}
+
+.agendamento__title-accent {
+  display: block;
+  color: var(--color-advantageous);
+}
+
+/* Formulário */
+.agendamento__form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-20);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.form-field__label {
+  font-size: var(--text-body-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+  line-height: var(--lh-overline);
+}
+
+.form-field__input {
+  width: 100%;
+  padding: var(--space-16) var(--space-20);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  outline: none;
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.form-field__input::placeholder {
+  color: var(--gray-300);
+}
+
+.form-field__input:focus {
+  border-color: var(--color-advantageous);
+  box-shadow: 0 0 0 3px rgba(32, 112, 104, 0.10);
+}
+
+/* Date field */
+.form-field__date-wrap {
+  position: relative;
+}
+
+.form-field__date-wrap .form-field__input {
+  padding-right: var(--space-48);
+}
+
+.form-field__icon {
+  position: absolute;
+  right: var(--space-16);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+  opacity: 0.45;
+  display: block;
+}
+
+/* Horários */
+.horarios {
+  margin-top: var(--space-4);
+}
+
+.horarios__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+}
+
+.horario-btn {
+  padding: var(--space-12) var(--space-8);
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  font-weight: var(--fw-semibold);
+  color: var(--color-text);
+  background-color: var(--color-white);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition:
+    background-color var(--transition-fast),
+    border-color var(--transition-fast),
+    color var(--transition-fast);
+  text-align: center;
+}
+
+.horario-btn:hover {
+  border-color: var(--color-advantageous);
+  color: var(--color-advantageous);
+}
+
+.horario-btn:focus-visible {
+  outline: 2px solid var(--color-advantageous);
+  outline-offset: 2px;
+}
+
+.horario-btn:active {
+  transform: scale(0.97);
+}
+
+.horario-btn.is-selected {
+  background-color: var(--color-advantageous);
+  border-color: var(--color-advantageous);
+  color: var(--color-white);
+}
+
+.agendamento__submit {
+  margin-top: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .agendamento {
+    padding-block: var(--space-96);
+  }
+
+  .agendamento__form {
+    max-width: 560px;
+  }
+
+  .horarios__grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}

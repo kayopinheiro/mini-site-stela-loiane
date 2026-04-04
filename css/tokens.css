@@ -1,0 +1,203 @@
+/* ============================================================
+   STELA LOIANE STUDIO — Design Tokens
+   Fonte: Figma → Stela Loiane Studio — Landing Page
+   ============================================================ */
+
+:root {
+
+  /* ----------------------------------------------------------
+     CORES — Brand
+  ---------------------------------------------------------- */
+  --color-black-hole:      #020202;
+  --color-advantageous:    #207068;
+  --color-turquoise-chalk: #68E8D9;
+  --color-mint-condition:  #D9F9F6;
+  --color-white:           #FFFFFF;
+
+  /* ----------------------------------------------------------
+     CORES — Primárias
+  ---------------------------------------------------------- */
+  --color-primary:         #020202; /* Black Hole */
+  --color-primary-accent:  #68E8D9; /* Turquoise Chalk */
+
+  /* ----------------------------------------------------------
+     CORES — Secundárias
+  ---------------------------------------------------------- */
+  --color-secondary:       #207068; /* Advantageous */
+  --color-secondary-light: #D9F9F6; /* Mint Condition */
+
+  /* ----------------------------------------------------------
+     CORES — Paleta Advantageous (verde escuro)
+  ---------------------------------------------------------- */
+  --advantageous-50:  #E9F1F0;
+  --advantageous-100: #BAD3D0;
+  --advantageous-200: #98BDBA;
+  --advantageous-300: #6A9F9A;
+  --advantageous-400: #408086;
+  --advantageous-500: #207068;
+  --advantageous-600: #1D655F;
+  --advantageous-700: #17504A;
+  --advantageous-800: #123E38;
+  --advantageous-900: #002F2C;
+
+  /* ----------------------------------------------------------
+     CORES — Paleta Turquoise Chalk (turquesa)
+  ---------------------------------------------------------- */
+  --turquoise-50:  #F0FDFB;
+  --turquoise-100: #D0F7F3;
+  --turquoise-200: #B9F4EE;
+  --turquoise-300: #98EEE6;
+  --turquoise-400: #85EBE1;
+  --turquoise-500: #68E8D9;
+  --turquoise-600: #5DD1C5;
+  --turquoise-700: #48A39A;
+  --turquoise-800: #387F77;
+  --turquoise-900: #29815B;
+
+  /* ----------------------------------------------------------
+     CORES — Paleta Mint Condition (verde clarinho)
+  ---------------------------------------------------------- */
+  --mint-50:  #F8FEFE;
+  --mint-100: #F3FDFC;
+  --mint-200: #EEFCFB;
+  --mint-300: #E6FBF9;
+  --mint-400: #E1FAF8;
+  --mint-500: #D9F9F6;
+  --mint-600: #C5E3E0;
+  --mint-700: #9AB1AF;
+  --mint-800: #778B87;
+  --mint-900: #388987;
+
+  /* ----------------------------------------------------------
+     CORES — Paleta Gray
+  ---------------------------------------------------------- */
+  --gray-50:  #F7F7F7;
+  --gray-100: #E8E8E8;
+  --gray-200: #CBCBCB;
+  --gray-300: #A3A3A3;
+  --gray-400: #737373;
+  --gray-500: #525252;
+  --gray-600: #363636;
+  --gray-700: #242424;
+  --gray-800: #141414;
+  --gray-900: #020202;
+
+  /* ----------------------------------------------------------
+     CORES — Semânticas (uso no código)
+  ---------------------------------------------------------- */
+  --color-bg:          #FFFFFF;
+  --color-bg-dark:     #020202;
+  --color-bg-subtle:   #D9F9F6;
+  --color-text:        #020202;
+  --color-text-muted:  #525252;
+  --color-text-light:  #FFFFFF;
+  --color-border:      #E8E8E8;
+  --color-cta:         #68E8D9;
+  --color-cta-hover:   #5DD1C5;
+
+  /* ----------------------------------------------------------
+     TIPOGRAFIA — Famílias
+  ---------------------------------------------------------- */
+  --font-heading: 'Fraunces', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  /* ----------------------------------------------------------
+     TIPOGRAFIA — Tamanhos (Desktop)
+  ---------------------------------------------------------- */
+  --text-display-1: 96px;
+  --text-display-2: 80px;
+  --text-h1:        64px;
+  --text-h2:        48px;
+  --text-h3:        40px;
+  --text-h4:        32px;
+  --text-h5:        24px;
+  --text-h6:        20px;
+
+  --text-body-lg:  20px;
+  --text-body-md:  18px;
+  --text-body:     16px;
+  --text-body-sm:  14px;
+  --text-body-xs:  12px;
+  --text-overline: 14px;
+
+  /* ----------------------------------------------------------
+     TIPOGRAFIA — Line Heights
+  ---------------------------------------------------------- */
+  --lh-display:  1.10; /* Display 1 e 2 */
+  --lh-h1:       1.15;
+  --lh-h2-h3:    1.20;
+  --lh-h4-h5:    1.30;
+  --lh-h6:       1.40;
+  --lh-body-lg:  1.50;
+  --lh-body:     1.60;
+  --lh-overline: 1.40;
+
+  /* ----------------------------------------------------------
+     TIPOGRAFIA — Pesos
+  ---------------------------------------------------------- */
+  --fw-regular:   400;
+  --fw-semibold:  600;
+
+  /* ----------------------------------------------------------
+     GRID & LAYOUT
+  ---------------------------------------------------------- */
+  --container-max:        1440px;
+  --container-padding-mobile:  24px;
+  --container-padding-desktop: 80px;
+  --grid-cols-mobile:   4;
+  --grid-cols-desktop:  12;
+  --grid-gutter-mobile: 16px;
+  --grid-gutter-desktop: 24px;
+
+  /* ----------------------------------------------------------
+     ESPAÇAMENTOS (escala)
+  ---------------------------------------------------------- */
+  --space-2:   2px;
+  --space-4:   4px;
+  --space-8:   8px;
+  --space-12:  12px;
+  --space-16:  16px;
+  --space-20:  20px;
+  --space-24:  24px;
+  --space-32:  32px;
+  --space-40:  40px;
+  --space-48:  48px;
+  --space-56:  56px;
+  --space-64:  64px;
+  --space-80:  80px;
+  --space-96:  96px;
+  --space-120: 120px;
+  --space-160: 160px;
+
+  /* ----------------------------------------------------------
+     BORDAS & RAIOS
+  ---------------------------------------------------------- */
+  --radius-sm:   4px;
+  --radius-md:   8px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* ----------------------------------------------------------
+     SOMBRAS
+  ---------------------------------------------------------- */
+  --shadow-sm:
+    0 1px 2px rgba(2, 2, 2, 0.04),
+    0 2px 4px rgba(2, 2, 2, 0.04);
+  --shadow-md:
+    0 2px 4px rgba(2, 2, 2, 0.04),
+    0 4px 12px rgba(2, 2, 2, 0.08);
+  --shadow-lg:
+    0 4px 8px rgba(2, 2, 2, 0.04),
+    0 8px 24px rgba(2, 2, 2, 0.10),
+    0 16px 48px rgba(2, 2, 2, 0.06);
+
+  /* ----------------------------------------------------------
+     TRANSIÇÕES
+  ---------------------------------------------------------- */
+  --transition-fast:   150ms ease;
+  --transition-base:   250ms ease;
+  --transition-slow:   400ms ease;
+  --transition-reveal: 600ms cubic-bezier(0.16, 1, 0.3, 1);
+
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Guide — Stela Loiane Studio</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/style-guide.css">
+
+  <style>
+    /* Estilos exclusivos do style guide */
+    body { padding: 40px 0 120px; }
+    .sg-section { padding: 48px 0; border-bottom: 1px solid var(--color-border); }
+    .sg-title {
+      font-family: var(--font-body);
+      font-size: 11px;
+      font-weight: var(--fw-semibold);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gray-400);
+      margin-bottom: 32px;
+    }
+    .sg-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: flex-end; }
+    .sg-col { display: flex; flex-direction: column; gap: 8px; }
+    .sg-label {
+      font-size: 11px;
+      color: var(--gray-400);
+      font-family: monospace;
+    }
+
+    /* Amostras de cor */
+    .color-swatch {
+      width: 80px;
+      height: 80px;
+      border-radius: var(--radius-md);
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+    .color-swatch--sm {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div style="padding: 48px 0 24px;">
+      <p class="overline">Stela Loiane Studio</p>
+      <h1 style="font-size: 48px; margin-top: 8px;">Style Guide</h1>
+    </div>
+
+    <!-- ===================== CORES ===================== -->
+    <div class="sg-section">
+      <p class="sg-title">Cores — Brand</p>
+      <div class="sg-row">
+        <div class="sg-col">
+          <div class="color-swatch" style="background: var(--color-black-hole);"></div>
+          <span class="sg-label">Black Hole<br>#020202</span>
+        </div>
+        <div class="sg-col">
+          <div class="color-swatch" style="background: var(--color-advantageous);"></div>
+          <span class="sg-label">Advantageous<br>#207068</span>
+        </div>
+        <div class="sg-col">
+          <div class="color-swatch" style="background: var(--color-turquoise-chalk); border-color: var(--gray-200);"></div>
+          <span class="sg-label">Turquoise Chalk<br>#68E8D9</span>
+        </div>
+        <div class="sg-col">
+          <div class="color-swatch" style="background: var(--color-mint-condition); border-color: var(--gray-200);"></div>
+          <span class="sg-label">Mint Condition<br>#D9F9F6</span>
+        </div>
+        <div class="sg-col">
+          <div class="color-swatch" style="background: var(--color-white); border-color: var(--gray-200);"></div>
+          <span class="sg-label">White<br>#FFFFFF</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sg-section">
+      <p class="sg-title">Paleta — Advantageous</p>
+      <div class="sg-row">
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--advantageous-50);"></div><span class="sg-label">50</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--advantageous-100);"></div><span class="sg-label">100</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--advantageous-200);"></div><span class="sg-label">200</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--advantageous-300);"></div><span class="sg-label">300</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--advantageous-400);"></div><span class="sg-label">400</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--advantageous-500);"></div><span class="sg-label">500 ★</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--advantageous-600);"></div><span class="sg-label">600</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--advantageous-700);"></div><span class="sg-label">700</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--advantageous-800);"></div><span class="sg-label">800</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--advantageous-900);"></div><span class="sg-label">900</span></div>
+      </div>
+    </div>
+
+    <div class="sg-section">
+      <p class="sg-title">Paleta — Turquoise Chalk</p>
+      <div class="sg-row">
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--turquoise-50); border: 1px solid var(--gray-200);"></div><span class="sg-label">50</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--turquoise-100);"></div><span class="sg-label">100</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--turquoise-200);"></div><span class="sg-label">200</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--turquoise-300);"></div><span class="sg-label">300</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--turquoise-400);"></div><span class="sg-label">400</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--turquoise-500);"></div><span class="sg-label">500 ★</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--turquoise-600);"></div><span class="sg-label">600</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--turquoise-700);"></div><span class="sg-label">700</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--turquoise-800);"></div><span class="sg-label">800</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--turquoise-900);"></div><span class="sg-label">900</span></div>
+      </div>
+    </div>
+
+    <div class="sg-section">
+      <p class="sg-title">Paleta — Gray</p>
+      <div class="sg-row">
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--gray-50); border: 1px solid var(--gray-200);"></div><span class="sg-label">50</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--gray-100);"></div><span class="sg-label">100</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--gray-200);"></div><span class="sg-label">200</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--gray-300);"></div><span class="sg-label">300</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--gray-400);"></div><span class="sg-label">400</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--gray-500);"></div><span class="sg-label">500</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--gray-600);"></div><span class="sg-label">600</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--gray-700);"></div><span class="sg-label">700</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--gray-800);"></div><span class="sg-label">800</span></div>
+        <div class="sg-col"><div class="color-swatch--sm" style="background: var(--gray-900);"></div><span class="sg-label">900</span></div>
+      </div>
+    </div>
+
+    <!-- ===================== TIPOGRAFIA ===================== -->
+    <div class="sg-section">
+      <p class="sg-title">Tipografia — Headings (Fraunces)</p>
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div><span class="sg-label">Display 1 · 96px · Regular · 110%</span><p class="display-1" style="font-size: clamp(40px, 6vw, 96px);">Display 1</p></div>
+        <div><span class="sg-label">Display 2 · 80px · Regular · 110%</span><p class="display-2" style="font-size: clamp(32px, 5vw, 80px);">Display 2</p></div>
+        <div><span class="sg-label">Heading 1 · 64px · Regular · 115%</span><h1>Heading 1</h1></div>
+        <div><span class="sg-label">Heading 2 · 48px · Regular · 120%</span><h2>Heading 2</h2></div>
+        <div><span class="sg-label">Heading 3 · 40px · Regular · 120%</span><h3>Heading 3</h3></div>
+        <div><span class="sg-label">Heading 4 · 32px · Regular · 130%</span><h4>Heading 4</h4></div>
+        <div><span class="sg-label">Heading 5 · 24px · Regular · 130%</span><h5>Heading 5</h5></div>
+        <div><span class="sg-label">Heading 6 · 20px · Regular · 140%</span><h6>Heading 6</h6></div>
+      </div>
+    </div>
+
+    <div class="sg-section">
+      <p class="sg-title">Tipografia — Body (DM Sans)</p>
+      <div style="display: flex; flex-direction: column; gap: 16px;">
+        <div><span class="sg-label">Large · 20px · Regular · 150%</span><p style="font-size: var(--text-body-lg); line-height: var(--lh-body-lg);">O corpo do texto principal em tamanho grande para chamadas importantes.</p></div>
+        <div><span class="sg-label">Medium · 18px · Regular · 150%</span><p style="font-size: var(--text-body-md); line-height: var(--lh-body-lg);">Texto em tamanho médio, usado em descrições e subtítulos de seção.</p></div>
+        <div><span class="sg-label">Regular · 16px · Regular · 160%</span><p style="font-size: var(--text-body);">Texto padrão do corpo, usado na maioria dos parágrafos e conteúdo geral do site.</p></div>
+        <div><span class="sg-label">Small · 14px · Regular · 160%</span><p style="font-size: var(--text-body-sm);">Texto pequeno para legendas, metadados e informações secundárias.</p></div>
+        <div><span class="sg-label">Tiny · 12px · Regular · 160%</span><p style="font-size: var(--text-body-xs);">Texto mínimo para notas de rodapé e labels muito compactos.</p></div>
+        <div><span class="sg-label">Overline · 14px · SemiBold · 140% · uppercase</span><p class="overline">Overline label</p></div>
+      </div>
+    </div>
+
+    <!-- ===================== BOTÕES ===================== -->
+    <div class="sg-section">
+      <p class="sg-title">Navbar (Figma 4088:1392)</p>
+      <div class="sg-navbar-preview" data-sg-navbar-demo>
+        <header class="sg-navbar" aria-label="Navbar demo">
+          <a href="#" class="sg-navbar__logo" aria-label="Stela Loiane Studio">
+            <img src="assets/Logo Navbar.svg" alt="Stela Loiane Studio">
+          </a>
+          <button class="sg-navbar__toggle" aria-label="Abrir menu" aria-expanded="false" data-sg-navbar-toggle>
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </header>
+
+        <nav class="sg-navbar__mobile-menu" aria-label="Menu mobile" data-sg-navbar-menu>
+          <div class="sg-navbar__mobile-links">
+            <a href="#">Sobre</a>
+            <a href="#">Catálogo</a>
+            <a href="#">Contato</a>
+          </div>
+          <a href="#" class="btn btn--accent">Fale comigo</a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- ===================== BOTÕES ===================== -->
+    <div class="sg-section">
+      <p class="sg-title">Botões</p>
+      <div class="sg-row" style="align-items: center;">
+        <div class="sg-col"><span class="sg-label">.btn--primary</span><button class="btn btn--primary">Primary</button></div>
+        <div class="sg-col"><span class="sg-label">.btn--accent</span><button class="btn btn--accent">Accent</button></div>
+        <div class="sg-col"><span class="sg-label">.btn--secondary</span><button class="btn btn--secondary">Secondary</button></div>
+        <div class="sg-col" style="background: var(--color-black-hole); padding: 16px; border-radius: 8px;"><span class="sg-label" style="color: var(--gray-500);">.btn--ghost</span><button class="btn btn--ghost">Ghost</button></div>
+        <div class="sg-col"><span class="sg-label">.btn--sm</span><button class="btn btn--primary btn--sm">Small</button></div>
+        <div class="sg-col"><span class="sg-label">.btn--lg</span><button class="btn btn--primary btn--lg">Large</button></div>
+      </div>
+    </div>
+
+    <!-- ===================== TAGS ===================== -->
+    <div class="sg-section">
+      <p class="sg-title">Tags</p>
+      <div class="sg-row">
+        <div class="sg-col"><span class="sg-label">.tag--mint</span><span class="tag tag--mint">Mint Tag</span></div>
+        <div class="sg-col"><span class="sg-label">.tag--turquoise</span><span class="tag tag--turquoise">Turquoise Tag</span></div>
+        <div class="sg-col"><span class="sg-label">.tag--dark</span><span class="tag tag--dark">Dark Tag</span></div>
+      </div>
+    </div>
+
+    <!-- ===================== CARDS ===================== -->
+    <div class="sg-section">
+      <p class="sg-title">Cards</p>
+      <div class="sg-row" style="align-items: flex-start;">
+        <div style="width: 280px;">
+          <span class="sg-label">.card</span>
+          <div class="card" style="margin-top: 8px;">
+            <img class="card__image" src="https://placehold.co/560x420/D9F9F6/207068" alt="">
+            <div class="card__body">
+              <h5 class="card__title">Título do card</h5>
+              <p class="card__description">Descrição breve do item exibido neste card, com informações relevantes.</p>
+            </div>
+          </div>
+        </div>
+        <div style="width: 280px;">
+          <span class="sg-label">.card--dark</span>
+          <div class="card card--dark" style="margin-top: 8px;">
+            <img class="card__image" src="https://placehold.co/560x420/207068/68E8D9" alt="">
+            <div class="card__body">
+              <h5 class="card__title">Título do card</h5>
+              <p class="card__description">Versão escura do card, para seções com fundo dark.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+
+  <script src="js/style-guide.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
