@@ -221,9 +221,9 @@
 .navbar {
   position: fixed;
   top: 0;
-  left: 50%;
-  right: auto;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  margin-inline: auto;
   width: 100%;
   max-width: var(--app-shell-max-width);
   z-index: 100;
@@ -328,7 +328,7 @@
   left: 0;
   right: 0;
   width: 100%;
-  max-width: 600px;
+  max-width: 100%;
   min-height: calc(100dvh - 88px);
   background-color: rgba(2, 2, 2, 0.55);
   border: 0;
@@ -347,7 +347,7 @@
   bottom: auto;
   left: 0;
   width: 100%;
-  max-width: 600px;
+  max-width: 100%;
   background-color: rgba(2, 2, 2, 1);
   min-height: calc(100dvh - 88px);
   z-index: 99;
@@ -374,6 +374,11 @@
 }
 
 @media (min-width: 768px) {
+  .navbar__menu-overlay,
+  .navbar__mobile-menu {
+    max-width: 600px;
+  }
+
   .navbar__mobile-menu {
     left: auto;
     right: 0;
