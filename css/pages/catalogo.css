@@ -1,14 +1,45 @@
 /* ============================================================
    STELA LOIANE STUDIO — Catálogo (catalogo.html)
-   Preencher conforme seções do Figma
+   Mobile First — 375px → 768px → 1280px
    ============================================================ */
 
-/* Adicione os estilos específicos do Catálogo aqui,
-   organizados por seção. Exemplo:
+/* ============================================================
+   1) VARIABLES (PAGE-SPECIFIC)
+   ============================================================ */
 
-.catalogo-hero { ... }
-.catalogo-grid { ... }
-.catalogo-filtros { ... }
-.catalogo-card { ... }
+:root {
+  --catalogo-section-min-height: 120px;
+}
 
-*/
+/* ============================================================
+   2) RESET / BASE (PAGE-SPECIFIC)
+   ============================================================ */
+
+body.page_catalogo {
+  width: 100%;
+}
+
+.page-wrapper--catalogo {
+  width: 100%;
+}
+
+/* ============================================================
+   3) LAYOUT
+   ============================================================ */
+
+.section_catalogo-hero,
+.section_catalogo-grid {
+  min-height: var(--catalogo-section-min-height);
+}
+
+/* ============================================================
+   4) COMPONENTS
+   ============================================================ */
+
+/* Estrutura pronta para componentes do catálogo (cards, filtros, etc.). */
+
+/* ============================================================
+   5) UTILITIES
+   ============================================================ */
+
+/* Utilities específicas da página podem ser adicionadas aqui. */

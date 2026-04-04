@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages/home.css">
 </head>
-<body>
+<body class="page_home">
 
   <!-- NAVBAR -->
   <header class="navbar" id="navbar">
@@ -41,31 +41,33 @@
     </div>
   </header>
 
-  <!-- MENU MOBILE -->
-  <nav class="navbar__mobile-menu" aria-label="Menu mobile">
-    <div class="navbar__mobile-links">
-      <a href="#sobre" class="navbar__link">Sobre</a>
-      <a href="catalogo.html" class="navbar__link">Catálogo</a>
-      <a href="#contato" class="navbar__link">Contato</a>
-    </div>
-    <a href="#contato" class="btn btn--accent">Fale comigo</a>
-  </nav>
+  <main class="page-wrapper page-wrapper--home" id="main-content">
 
-  <main>
+    <button class="navbar__menu-overlay" type="button" aria-label="Fechar menu" aria-hidden="true" tabindex="-1"></button>
+
+    <!-- MENU MOBILE -->
+    <nav class="navbar__mobile-menu" aria-label="Menu mobile">
+      <div class="navbar__mobile-links">
+        <a href="#sobre" class="navbar__link">Sobre</a>
+        <a href="catalogo.html" class="navbar__link">Catálogo</a>
+        <a href="#contato" class="navbar__link">Contato</a>
+      </div>
+      <a href="#contato" class="btn btn--accent">Fale comigo</a>
+    </nav>
 
     <!-- ======================================================
          HERO
     ====================================================== -->
-    <section class="hero" id="hero">
-      <img src="assets/Img Hero.png" alt="Stela Loiane" class="hero__bg">
+    <section class="hero section_home-hero" id="hero" aria-labelledby="home-hero-title">
+      <img src="assets/img-hero-600px.png" alt="Stela Loiane" class="hero__bg">
       <div class="container hero__content">
         <div class="hero__copy">
-          <p class="hero__overline">
-            <span class="hero__diamond">◆</span>
-            Role a pagina
-            <span class="hero__diamond">◆</span>
+          <p class="tagline tagline--dark">
+            <span class="tagline__icon" aria-hidden="true"></span>
+            <span class="tagline__text">Role a pagina</span>
+            <span class="tagline__icon" aria-hidden="true"></span>
           </p>
-          <h1 class="hero__title">
+          <h1 class="hero__title" id="home-hero-title">
             Lorem ipsum amet
             <span class="hero__title-accent">suspendisse.</span>
           </h1>
@@ -86,9 +88,9 @@
     <!-- ======================================================
          SOBRE
     ====================================================== -->
-    <section class="sobre section--mint" id="sobre">
+    <section class="sobre section--mint section_home-about" id="sobre" aria-labelledby="home-about-title">
       <div class="container">
-        <h2 class="sobre__title" data-reveal="up">
+        <h2 class="sobre__title" id="home-about-title" data-reveal="up">
           Lorem ipsum amet
           <span class="sobre__title-accent">suspendisse.</span>
         </h2>
@@ -105,35 +107,35 @@
     <!-- ======================================================
          SERVIÇOS
     ====================================================== -->
-    <section class="servicos" id="servicos">
+    <section class="servicos section_home-services" id="servicos" aria-labelledby="home-services-title">
       <div class="container">
-        <p class="section-overline" data-reveal="up">
-          <span class="diamond">◆</span>
-          Role a página
-          <span class="diamond">◆</span>
+        <p class="tagline tagline--light" data-reveal="up">
+          <span class="tagline__icon" aria-hidden="true"></span>
+          <span class="tagline__text">Role a pagina</span>
+          <span class="tagline__icon" aria-hidden="true"></span>
         </p>
-        <h2 class="servicos__title" data-reveal="up" data-reveal-delay="50">
+        <h2 class="servicos__title" id="home-services-title" data-reveal="up" data-reveal-delay="50">
           Lorem ipsum amet
           <span class="servicos__title-accent">suspendisse.</span>
         </h2>
 
         <div class="servicos__list">
-          <article class="servico-card" data-reveal="up">
-            <span class="tag tag--mint">Extensão</span>
-            <h3 class="servico-card__title">Volume Brasileiro</h3>
-            <p class="servico-card__desc">O favorito das brasileiras. Cílios cheios, com volume natural e durabilidade impecável no dia a dia.</p>
+          <article class="card" data-reveal="up">
+            <div class="card_tag">Extensão</div>
+            <h3 class="card_title">Volume Brasileiro</h3>
+            <p class="card_text">O favorito das brasileiras. Cílios cheios, com volume natural e durabilidade impecável no dia a dia.</p>
           </article>
 
-          <article class="servico-card" data-reveal="up" data-reveal-delay="100">
-            <span class="tag tag--mint">Extensão</span>
-            <h3 class="servico-card__title">Volume Brasileiro</h3>
-            <p class="servico-card__desc">O favorito das brasileiras. Cílios cheios, com volume natural e durabilidade impecável no dia a dia.</p>
+          <article class="card" data-reveal="up" data-reveal-delay="100">
+            <div class="card_tag">Extensão</div>
+            <h3 class="card_title">Volume Brasileiro</h3>
+            <p class="card_text">O favorito das brasileiras. Cílios cheios, com volume natural e durabilidade impecável no dia a dia.</p>
           </article>
 
-          <article class="servico-card" data-reveal="up" data-reveal-delay="200">
-            <span class="tag tag--mint">Extensão</span>
-            <h3 class="servico-card__title">Volume Brasileiro</h3>
-            <p class="servico-card__desc">O favorito das brasileiras. Cílios cheios, com volume natural e durabilidade impecável no dia a dia.</p>
+          <article class="card" data-reveal="up" data-reveal-delay="200">
+            <div class="card_tag">Extensão</div>
+            <h3 class="card_title">Volume Brasileiro</h3>
+            <p class="card_text">O favorito das brasileiras. Cílios cheios, com volume natural e durabilidade impecável no dia a dia.</p>
           </article>
         </div>
 
@@ -147,14 +149,14 @@
     <!-- ======================================================
          AGENDAMENTO
     ====================================================== -->
-    <section class="agendamento" id="contato">
+    <section class="agendamento section_home-booking" id="contato" aria-labelledby="home-booking-title">
       <div class="container">
-        <p class="section-overline" data-reveal="up">
-          <span class="diamond">◆</span>
-          Role a página
-          <span class="diamond">◆</span>
+        <p class="tagline tagline--light" data-reveal="up">
+          <span class="tagline__icon" aria-hidden="true"></span>
+          <span class="tagline__text">Role a pagina</span>
+          <span class="tagline__icon" aria-hidden="true"></span>
         </p>
-        <h2 class="agendamento__title" data-reveal="up" data-reveal-delay="50">
+        <h2 class="agendamento__title" id="home-booking-title" data-reveal="up" data-reveal-delay="50">
           Lorem ipsum amet
           <span class="agendamento__title-accent">suspendisse.</span>
         </h2>
@@ -225,24 +227,29 @@
   <!-- ======================================================
        FOOTER
   ====================================================== -->
-  <footer class="footer footer--home">
-    <div class="container">
-      <div class="footer__symbol">
-        <img src="assets/Simbolo Tagline.svg" alt="Stela Loiane Studio">
+  <footer class="footer component_footer" aria-label="Rodapé">
+    <div class="container footer__container">
+      <div class="footer__brand-mark">
+        <img src="assets/Logo Footer.svg" alt="Stela Loiane Studio">
       </div>
-      <p class="footer__address">Av. Principal. 1234 - Centro, Sao Paulo-SP</p>
-      <p class="footer__hours">Seg a Sex: 08h as 19h / Sáb: 08h as 12h</p>
-      <div class="footer__social">
+
+      <div class="footer__info">
+        <p class="footer__address">Av. Principal. 1234 – Centro, Sao Paulo-SP</p>
+        <p class="footer__hours">Seg a Sex: 08h as 19h / Sáb: 08h as 12h</p>
+      </div>
+
+      <div class="footer__social" aria-label="Redes sociais">
         <a href="#" class="footer__social-link" aria-label="Instagram">
-          <img src="https://placehold.co/32x32/363636/737373" alt="Instagram">
+          <img src="assets/broken_image.svg" alt="Instagram">
         </a>
         <a href="#" class="footer__social-link" aria-label="Facebook">
-          <img src="https://placehold.co/32x32/363636/737373" alt="Facebook">
+          <img src="assets/broken_image.svg" alt="Facebook">
         </a>
         <a href="#" class="footer__social-link" aria-label="TikTok">
-          <img src="https://placehold.co/32x32/363636/737373" alt="TikTok">
+          <img src="assets/broken_image.svg" alt="TikTok">
         </a>
       </div>
+
       <p class="footer__copy">&copy; 2026 Stela Loiane Studio. Todos os direitos reservados.</p>
     </div>
   </footer>

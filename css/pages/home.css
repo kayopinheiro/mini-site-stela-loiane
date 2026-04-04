@@ -4,17 +4,58 @@
    ============================================================ */
 
 /* ============================================================
+  1) VARIABLES (PAGE-SPECIFIC)
+  ============================================================ */
+
+:root {
+  --home-hero-padding-top-mobile: 360px;
+  --home-hero-padding-bottom-mobile: var(--space-64);
+}
+
+/* ============================================================
+  2) RESET / BASE (PAGE-SPECIFIC)
+  ============================================================ */
+
+body.page_home {
+  width: 100%;
+}
+
+.page-wrapper--home {
+  width: 100%;
+}
+
+/* ============================================================
+  3) LAYOUT
+  ============================================================ */
+
+.section_home-hero,
+.section_home-about,
+.section_home-services,
+.section_home-booking {
+  width: 100%;
+}
+
+/* ============================================================
    HERO
    ============================================================ */
 
 .hero {
   background-color: var(--color-black-hole);
+  background-image: url('../../assets/img-hero-600px.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
   position: relative;
-  min-height: 100svh;
-  display: block;
-  padding-top: 360px;
-  padding-bottom: var(--space-64);
+  min-height: 100dvh;
+  display: flex;
+  align-items: stretch;
   overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-position: 50% 16%;
+  }
 }
 
 .hero::after {
@@ -26,19 +67,18 @@
 }
 
 .hero__bg {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center top;
+  display: none;
 }
 
 .hero__content {
   position: relative;
   z-index: 2;
+  min-height: 100dvh;
+  padding-top: var(--home-hero-padding-top-mobile);
+  padding-bottom: var(--home-hero-padding-bottom-mobile);
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   align-items: stretch;
   gap: var(--space-32);
 }
@@ -49,29 +89,9 @@
   gap: var(--space-16);
 }
 
-.hero__overline {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  font-family: var(--font-body);
-  font-size: var(--text-overline);
-  font-weight: var(--fw-semibold);
-  letter-spacing: 0;
-  text-transform: uppercase;
-  line-height: 1.5;
-  color: var(--color-white);
-  width: max-content;
-}
-
-.hero__diamond {
-  color: var(--color-turquoise-chalk);
-  font-size: 12px;
-  line-height: 1;
-}
-
 .hero__title {
   font-family: var(--font-heading);
-  font-size: var(--text-h2);
+  font-size: var(--font-h1);
   line-height: var(--lh-h2-h3);
   color: var(--color-white);
   letter-spacing: 0;
@@ -80,7 +100,7 @@
 .hero__title-accent {
   display: block;
   color: var(--color-turquoise-chalk);
-  font-size: var(--text-h1);
+  font-size: var(--font-h1);
   line-height: var(--lh-h2-h3);
 }
 
@@ -112,49 +132,6 @@
   height: 24px;
 }
 
-@media (min-width: 768px) {
-  .hero {
-    min-height: 980px;
-    padding-top: 420px;
-    padding-bottom: var(--space-80);
-  }
-
-  .hero__content {
-    max-width: 560px;
-  }
-
-  .hero__title {
-    font-size: var(--text-h1);
-  }
-
-  .hero__title-accent {
-    font-size: clamp(var(--text-h1), 6.2vw, var(--text-display-2));
-  }
-}
-
-@media (min-width: 1024px) {
-  .hero {
-    min-height: 1024px;
-    padding-top: 460px;
-    padding-bottom: var(--space-96);
-  }
-
-  .hero__content {
-    max-width: 640px;
-  }
-
-  .hero__title {
-    font-size: clamp(var(--text-h2), 4.8vw, var(--text-display-2));
-  }
-
-  .hero__title-accent {
-    font-size: clamp(var(--text-h1), 5.4vw, var(--text-display-1));
-  }
-
-  .hero__scroll {
-    justify-content: flex-start;
-  }
-}
 
 /* ============================================================
    SOBRE
@@ -166,7 +143,7 @@
 
 .sobre__title {
   font-family: var(--font-heading);
-  font-size: clamp(32px, 9vw, var(--text-h2));
+  font-size: var(--font-h2);
   line-height: 1.12;
   color: var(--color-text);
   letter-spacing: -0.01em;
@@ -185,19 +162,6 @@
   margin-bottom: var(--space-40);
 }
 
-@media (min-width: 768px) {
-  .sobre {
-    padding-block: var(--space-96);
-  }
-
-  .sobre__title {
-    font-size: clamp(40px, 5vw, var(--text-h2));
-  }
-
-  .sobre__desc {
-    max-width: 640px;
-  }
-}
 
 /* ============================================================
    SERVIÇOS
@@ -208,28 +172,13 @@
   padding-block: var(--space-56);
 }
 
-.section-overline {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-8);
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: var(--fw-semibold);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--color-advantageous);
+.tagline {
   margin-bottom: var(--space-16);
-}
-
-.diamond {
-  color: var(--color-turquoise-chalk);
-  font-size: 8px;
-  line-height: 1;
 }
 
 .servicos__title {
   font-family: var(--font-heading);
-  font-size: clamp(32px, 9vw, var(--text-h2));
+  font-size: var(--font-h2);
   line-height: 1.12;
   color: var(--color-text);
   letter-spacing: -0.01em;
@@ -249,45 +198,6 @@
   margin-bottom: var(--space-32);
 }
 
-.servico-card {
-  background-color: var(--gray-50);
-  border-radius: var(--radius-lg);
-  padding: var(--space-24);
-}
-
-.servico-card .tag {
-  margin-bottom: var(--space-16);
-}
-
-.servico-card__title {
-  font-family: var(--font-heading);
-  font-size: var(--text-h5);
-  line-height: var(--lh-h4-h5);
-  color: var(--color-text);
-  margin-bottom: var(--space-8);
-}
-
-.servico-card__desc {
-  font-size: var(--text-body-sm);
-  color: var(--color-text-muted);
-  line-height: var(--lh-body);
-}
-
-@media (min-width: 768px) {
-  .servicos {
-    padding-block: var(--space-96);
-  }
-
-  .servicos__list {
-    flex-direction: row;
-    gap: var(--space-24);
-    margin-bottom: var(--space-48);
-  }
-
-  .servico-card {
-    flex: 1;
-  }
-}
 
 /* ============================================================
    AGENDAMENTO
@@ -300,7 +210,7 @@
 
 .agendamento__title {
   font-family: var(--font-heading);
-  font-size: clamp(32px, 9vw, var(--text-h2));
+  font-size: var(--font-h2);
   line-height: 1.12;
   color: var(--color-text);
   letter-spacing: -0.01em;
@@ -326,7 +236,7 @@
 }
 
 .form-field__label {
-  font-size: var(--text-body-sm);
+  font-size: var(--font-small);
   font-weight: var(--fw-semibold);
   color: var(--color-text);
   line-height: var(--lh-overline);
@@ -393,7 +303,7 @@
 .horario-btn {
   padding: var(--space-12) var(--space-8);
   font-family: var(--font-body);
-  font-size: var(--text-body-sm);
+  font-size: var(--font-small);
   font-weight: var(--fw-semibold);
   color: var(--color-text);
   background-color: var(--color-white);
@@ -431,16 +341,3 @@
   margin-top: var(--space-8);
 }
 
-@media (min-width: 768px) {
-  .agendamento {
-    padding-block: var(--space-96);
-  }
-
-  .agendamento__form {
-    max-width: 560px;
-  }
-
-  .horarios__grid {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}

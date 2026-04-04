@@ -7,8 +7,10 @@
 ---------------------------------------------------------- */
 (function () {
   const navbar = document.querySelector('.navbar');
+  const pageWrapper = document.querySelector('.page-wrapper');
   const toggle = document.querySelector('.navbar__toggle');
   const mobileMenu = document.querySelector('.navbar__mobile-menu');
+  const menuOverlay = document.querySelector('.navbar__menu-overlay');
   const mobileLinks = document.querySelectorAll('.navbar__mobile-menu a');
   const desktopBreakpoint = window.matchMedia('(min-width: 768px)');
 
@@ -17,6 +19,7 @@
     mobileMenu.classList.toggle('is-open', isOpen);
     toggle.classList.toggle('is-open', isOpen);
     navbar?.classList.toggle('is-menu-open', isOpen);
+    pageWrapper?.classList.toggle('is-menu-open', isOpen);
     toggle.setAttribute('aria-expanded', String(isOpen));
     document.body.style.overflow = isOpen ? 'hidden' : '';
   };
@@ -48,6 +51,10 @@
       link.addEventListener('click', () => {
         setMenuState(false);
       });
+    });
+
+    menuOverlay?.addEventListener('click', () => {
+      setMenuState(false);
     });
 
     document.addEventListener('keydown', (event) => {
