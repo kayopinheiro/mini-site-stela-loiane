@@ -225,6 +225,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const timezoneOffsetMs = hoje.getTimezoneOffset() * 60000;
     const hojeLocalIso = new Date(hoje.getTime() - timezoneOffsetMs).toISOString().split('T')[0];
     dataInput.setAttribute('min', hojeLocalIso);
+    const dateWrap = dataInput.closest('.form-field__date-wrap');
+
+    const syncDatePlaceholderState = () => {
+      if (!dateWrap) return;
+      dateWrap.classList.toggle('is-empty', !dataInput.value);
+    };
+
+    syncDatePlaceholderState();
 
     const openDatePicker = () => {
       if (typeof dataInput.showPicker === 'function') {
@@ -240,6 +248,15 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     dataInput.addEventListener('click', openDatePicker);
     dataInput.addEventListener('focus', openDatePicker);
+    dataInput.addEventListener('focus', () => {
+      dateWrap?.classList.add('is-focused');
+    });
+    dataInput.addEventListener('blur', () => {
+      dateWrap?.classList.remove('is-focused');
+      syncDatePlaceholderState();
+    });
+    dataInput.addEventListener('input', syncDatePlaceholderState);
+    dataInput.addEventListener('change', syncDatePlaceholderState);
     dataInput.addEventListener('keydown', (event) => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
@@ -247,7 +264,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       }
     });
 
-    const dateWrap = dataInput.closest('.form-field__date-wrap');
     if (dateWrap) {
       dateWrap.addEventListener('click', (event) => {
         if (event.target !== dataInput) {

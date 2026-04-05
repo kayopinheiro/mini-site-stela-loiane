@@ -752,11 +752,22 @@
   width: 100%;
   text-align: left;
   color: var(--color-white);
-  font-size: var(--font-h2);
+  font-size: clamp(28px, 7.2vw, 36px);
   line-height: 1.1;
   letter-spacing: -0.01em;
   padding: var(--space-16) var(--space-16);
   border-radius: var(--radius-md);
+}
+
+@media (max-width: 375px) {
+  .navbar__mobile-menu {
+    padding-inline: var(--space-20);
+  }
+
+  .navbar__mobile-menu .navbar__link {
+    font-size: 30px;
+    padding-inline: var(--space-12);
+  }
 }
 
 .navbar__mobile-links .navbar__link + .navbar__link {

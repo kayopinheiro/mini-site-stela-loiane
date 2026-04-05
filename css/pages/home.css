@@ -293,6 +293,23 @@ body.page_home {
   padding-right: var(--space-48);
 }
 
+.form-field__date-placeholder {
+  position: absolute;
+  top: 50%;
+  left: var(--space-20);
+  transform: translateY(-50%);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--gray-300);
+  pointer-events: none;
+  transition: opacity var(--transition-fast);
+}
+
+.form-field__date-wrap.is-focused .form-field__date-placeholder,
+.form-field__date-wrap:not(.is-empty) .form-field__date-placeholder {
+  opacity: 0;
+}
+
 .form-field__date-wrap .form-field__input::-webkit-calendar-picker-indicator {
   opacity: 0;
   cursor: pointer;
