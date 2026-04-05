@@ -8,38 +8,103 @@
    ============================================================ */
 
 :root {
-  --catalogo-section-min-height: 120px;
+  --catalogo-hero-padding-top: 150px;
+   --catalogo-hero-padding-bottom: var(--space-64);
+   --catalogo-section-padding: var(--space-56);
 }
 
 /* ============================================================
-   2) RESET / BASE (PAGE-SPECIFIC)
+   2) LAYOUT / SECTIONS
    ============================================================ */
 
-body.page_catalogo {
+.catalogo-hero,
+.catalogo-procedimentos,
+.catalogo-faq {
   width: 100%;
 }
 
-.page-wrapper--catalogo {
-  width: 100%;
+.catalogo-hero {
+  background-color: var(--mint-200);
+}
+
+.catalogo-hero__content {
+  padding-top: var(--catalogo-hero-padding-top);
+  padding-bottom: var(--catalogo-hero-padding-bottom);
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+}
+
+.catalogo-hero__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.catalogo-hero__title {
+  color: var(--color-black-hole);
+  font-size: var(--h2);
+  line-height: var(--lh-h2-h3);
+  max-width: 327px;
+}
+
+.catalogo-hero__title span {
+  color: var(--color-advantageous);
+}
+
+.catalogo-hero__desc {
+  color: var(--color-black-hole);
+  font-size: var(--text-regular);
+  line-height: 1.5;
+  max-width: 327px;
+}
+
+.catalogo-hero__cta {
+  margin-top: 0;
+}
+
+.catalogo-procedimentos,
+.catalogo-faq {
+  padding-block: var(--catalogo-section-padding);
+}
+
+.catalogo-faq {
+  background-color: var(--gray-50);
+}
+
+.catalogo-section-title {
+  margin-bottom: var(--space-24);
+}
+
+.catalogo-subtitle {
+  margin-top: var(--space-40);
+  margin-bottom: var(--space-16);
+  color: var(--color-advantageous);
 }
 
 /* ============================================================
-   3) LAYOUT
+   3) COMPONENTS
    ============================================================ */
 
-.section_catalogo-hero,
-.section_catalogo-grid {
-  min-height: var(--catalogo-section-min-height);
+/* Divisor entre grupos de procedimentos */
+.procedimento-divisor {
+  height: 1px;
+  background-color: var(--color-border);
+  margin-block: var(--space-40);
+}
+
+/* Espaçamento entre grupos */
+.catalogo-procedimentos .procedimento-group + .procedimento-divisor + .procedimento-group,
+.catalogo-procedimentos .procedimento-group {
+  /* gap handled by divisor */
 }
 
 /* ============================================================
-   4) COMPONENTS
+   4) UTILITIES
    ============================================================ */
 
-/* Estrutura pronta para componentes do catálogo (cards, filtros, etc.). */
-
-/* ============================================================
-   5) UTILITIES
-   ============================================================ */
-
-/* Utilities específicas da página podem ser adicionadas aqui. */
+@media (min-width: 768px) {
+  .catalogo-hero__content {
+    align-items: flex-start;
+  }
+}

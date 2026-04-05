@@ -250,6 +250,245 @@
           </div>
         </div>
       </section>
+
+      <!-- ===================== PILL COMPONENT ===================== -->
+      <section class="sg-section section_style-guide" aria-labelledby="sg-component-pill">
+        <p id="sg-component-pill" class="sg-title">Pill (Category Tag)</p>
+        <div class="sg-pill-showcase">
+          <span class="sg-label">Uso do componente <code class="sg-code">.pill</code> dentro de <code class="sg-code">.procedimento-group__pills</code></span>
+          <div class="procedimento-group__pills">
+            <span class="pill">cílios</span>
+            <span class="pill">sobrancelhas</span>
+            <span class="pill">lábios</span>
+            <span class="pill">adicionais</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== PROCEDIMENTO CARD ===================== -->
+      <section class="sg-section section_style-guide" aria-labelledby="sg-component-procedimento">
+        <p id="sg-component-procedimento" class="sg-title">Procedimento Card + Carousel</p>
+        <p class="sg-label" style="margin-bottom:24px;">
+          <code class="sg-code">.procedimento-group</code> → <code class="sg-code">.procedimento-carousel</code> → <code class="sg-code">.procedimento-card</code>
+        </p>
+
+        <!-- Exemplo 1: cílios -->
+        <div class="procedimento-group sg-procedimento-preview">
+          <div class="procedimento-group__pills">
+            <span class="pill">cílios</span>
+          </div>
+          <div class="procedimento-carousel" data-carousel>
+            <div class="procedimento-carousel__viewport">
+              <div class="procedimento-carousel__track">
+                <article class="procedimento-card">
+                  <h3 class="procedimento-card__title">Volume Brasileiro</h3>
+                  <div class="procedimento-card__body">
+                    <p class="procedimento-card__desc">O favorito das brasileiras. Cílios cheios, com volume natural e durabilidade impecável no dia a dia.</p>
+                    <ul class="procedimento-card__prices">
+                      <li class="procedimento-card__price-row"><span>Aplicação</span><strong>R$ 120,00</strong></li>
+                      <li class="procedimento-card__price-row"><span>Manutenção 15 dias</span><strong>R$ 70,00</strong></li>
+                      <li class="procedimento-card__price-row"><span>Manutenção 21 dias</span><strong>R$ 80,00</strong></li>
+                    </ul>
+                  </div>
+                </article>
+                <article class="procedimento-card">
+                  <h3 class="procedimento-card__title">Volume Egípcio</h3>
+                  <div class="procedimento-card__body">
+                    <p class="procedimento-card__desc">Visual mais marcante e volumoso, ideal para quem busca destaque no olhar.</p>
+                    <ul class="procedimento-card__prices">
+                      <li class="procedimento-card__price-row"><span>Aplicação</span><strong>R$ 140,00</strong></li>
+                      <li class="procedimento-card__price-row"><span>Manutenção 15 dias</span><strong>R$ 80,00</strong></li>
+                      <li class="procedimento-card__price-row"><span>Manutenção 21 dias</span><strong>R$ 90,00</strong></li>
+                    </ul>
+                  </div>
+                </article>
+                <article class="procedimento-card">
+                  <h3 class="procedimento-card__title">Volume Europeu 5D</h3>
+                  <div class="procedimento-card__body">
+                    <p class="procedimento-card__desc">Volume intenso e sofisticado, com fios ultrafinos que garantem leveza e elegância.</p>
+                    <ul class="procedimento-card__prices">
+                      <li class="procedimento-card__price-row"><span>Aplicação</span><strong>R$ 160,00</strong></li>
+                      <li class="procedimento-card__price-row"><span>Manutenção 15 dias</span><strong>R$ 90,00</strong></li>
+                      <li class="procedimento-card__price-row"><span>Manutenção 21 dias</span><strong>R$ 100,00</strong></li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="carousel-nav">
+              <span class="carousel-nav__counter" aria-live="polite">1/6</span>
+              <div class="carousel-nav__arrows">
+                <button class="carousel-arrow" aria-label="Anterior" disabled>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="carousel-arrow" aria-label="Próximo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Exemplo 2: sobrancelhas + lábios -->
+        <div class="procedimento-group sg-procedimento-preview">
+          <div class="procedimento-group__pills">
+            <span class="pill">sobrancelhas</span>
+            <span class="pill">lábios</span>
+          </div>
+          <div class="procedimento-carousel" data-carousel>
+            <div class="procedimento-carousel__viewport">
+              <div class="procedimento-carousel__track">
+                <article class="procedimento-card">
+                  <h3 class="procedimento-card__title">Design de sobrancelhas</h3>
+                  <div class="procedimento-card__body">
+                    <p class="procedimento-card__desc">Modelagem personalizada para valorizar o formato do seu rosto. Obs: Não realizo design com henna.</p>
+                    <ul class="procedimento-card__prices">
+                      <li class="procedimento-card__price-row"><span>Preço</span><strong>R$ 120,00</strong></li>
+                    </ul>
+                  </div>
+                </article>
+                <article class="procedimento-card">
+                  <h3 class="procedimento-card__title">Brow Lamination</h3>
+                  <div class="procedimento-card__body">
+                    <p class="procedimento-card__desc">Alinhamento dos fios para efeito volumoso e natural.</p>
+                    <ul class="procedimento-card__prices">
+                      <li class="procedimento-card__price-row"><span>Preço</span><strong>R$ 80,00</strong></li>
+                    </ul>
+                  </div>
+                </article>
+                <article class="procedimento-card">
+                  <h3 class="procedimento-card__title">Spa Labial</h3>
+                  <div class="procedimento-card__body">
+                    <p class="procedimento-card__desc">Hidratação profunda que devolve maciez e aspecto saudável aos lábios.</p>
+                    <ul class="procedimento-card__prices">
+                      <li class="procedimento-card__price-row"><span>Preço</span><strong>R$ 30,00</strong></li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="carousel-nav">
+              <span class="carousel-nav__counter" aria-live="polite">1/3</span>
+              <div class="carousel-nav__arrows">
+                <button class="carousel-arrow" aria-label="Anterior" disabled>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="carousel-arrow" aria-label="Próximo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Exemplo 3: adicionais -->
+        <div class="procedimento-group sg-procedimento-preview">
+          <div class="procedimento-group__pills">
+            <span class="pill">adicionais</span>
+          </div>
+          <div class="procedimento-carousel" data-carousel>
+            <div class="procedimento-carousel__viewport">
+              <div class="procedimento-carousel__track">
+                <article class="procedimento-card">
+                  <h3 class="procedimento-card__title">Remoção de cílios (outro profissional)</h3>
+                  <div class="procedimento-card__body">
+                    <p class="procedimento-card__desc">Remoção segura de extensões aplicadas por outro profissional.</p>
+                    <ul class="procedimento-card__prices">
+                      <li class="procedimento-card__price-row"><span>Preço</span><strong>R$ 40,00</strong></li>
+                    </ul>
+                  </div>
+                </article>
+                <article class="procedimento-card">
+                  <h3 class="procedimento-card__title">Remoção de cílios (feito no studio)</h3>
+                  <div class="procedimento-card__body">
+                    <p class="procedimento-card__desc">Remoção das extensões aplicadas aqui no studio.</p>
+                    <ul class="procedimento-card__prices">
+                      <li class="procedimento-card__price-row"><span>Preço</span><strong>R$ 20,00</strong></li>
+                    </ul>
+                  </div>
+                </article>
+                <article class="procedimento-card">
+                  <h3 class="procedimento-card__title">Epilação buço</h3>
+                  <div class="procedimento-card__body">
+                    <ul class="procedimento-card__prices">
+                      <li class="procedimento-card__price-row"><span>Preço</span><strong>R$ 15,00</strong></li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div class="carousel-nav">
+              <span class="carousel-nav__counter" aria-live="polite">1/3</span>
+              <div class="carousel-nav__arrows">
+                <button class="carousel-arrow" aria-label="Anterior" disabled>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                </button>
+                <button class="carousel-arrow" aria-label="Próximo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== FAQ COMPONENT ===================== -->
+      <section class="sg-section section_style-guide" aria-labelledby="sg-component-faq">
+        <p id="sg-component-faq" class="sg-title">FAQ Component</p>
+        <p class="sg-label" style="margin-bottom:24px;">
+          <code class="sg-code">.faq-list-v2</code> → <code class="sg-code">.faq-item-v2</code> → <code class="sg-code">.faq-item-v2__summary</code> → <code class="sg-code">.faq-item-v2__icon</code>
+        </p>
+        <div class="sg-faq-preview">
+          <dl class="faq-list-v2">
+            <details class="faq-item-v2" open>
+              <summary class="faq-item-v2__summary">
+                Quanto tempo dura o procedimento?
+                <span class="faq-item-v2__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </summary>
+              <p class="faq-item-v2__answer">Em média de 2 a 3 semanas, variando conforme os cuidados.</p>
+            </details>
+            <details class="faq-item-v2">
+              <summary class="faq-item-v2__summary">
+                Preciso fazer manutenção?
+                <span class="faq-item-v2__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </summary>
+              <p class="faq-item-v2__answer">Sim, a manutenção garante que o efeito continue bonito e uniforme.</p>
+            </details>
+            <details class="faq-item-v2">
+              <summary class="faq-item-v2__summary">
+                Posso usar maquiagem antes?
+                <span class="faq-item-v2__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </summary>
+              <p class="faq-item-v2__answer">Evite produtos oleosos na região dos olhos antes do procedimento.</p>
+            </details>
+            <details class="faq-item-v2">
+              <summary class="faq-item-v2__summary">
+                Quanto tempo demora o atendimento?
+                <span class="faq-item-v2__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </summary>
+              <p class="faq-item-v2__answer">Entre 1h30 e 2h dependendo do procedimento.</p>
+            </details>
+            <details class="faq-item-v2">
+              <summary class="faq-item-v2__summary">
+                Formas de pagamento?
+                <span class="faq-item-v2__icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="24" height="24"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </span>
+              </summary>
+              <p class="faq-item-v2__answer">Pix, dinheiro e cartão.</p>
+            </details>
+          </dl>
+        </div>
+      </section>
+
     </div>
 
     <!-- ===================== FOOTER COMPONENT ===================== -->

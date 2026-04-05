@@ -13,6 +13,22 @@
   const menuOverlay = document.querySelector('.navbar__menu-overlay');
   const mobileLinks = document.querySelectorAll('.navbar__mobile-menu a');
   const desktopBreakpoint = window.matchMedia('(min-width: 768px)');
+  const rootElement = document.documentElement;
+  let lockedScrollY = 0;
+
+  const lockScroll = () => {
+    lockedScrollY = window.scrollY || window.pageYOffset || 0;
+    rootElement.classList.add('menu-open');
+    document.body.classList.add('menu-open');
+    document.body.style.top = `-${lockedScrollY}px`;
+  };
+
+  const unlockScroll = () => {
+    rootElement.classList.remove('menu-open');
+    document.body.classList.remove('menu-open');
+    document.body.style.top = '';
+    window.scrollTo(0, lockedScrollY);
+  };
 
   const setMenuState = (isOpen) => {
     if (!toggle || !mobileMenu) return;
@@ -21,7 +37,12 @@
     navbar?.classList.toggle('is-menu-open', isOpen);
     pageWrapper?.classList.toggle('is-menu-open', isOpen);
     toggle.setAttribute('aria-expanded', String(isOpen));
-    document.body.style.overflow = isOpen ? 'hidden' : '';
+
+    if (isOpen) {
+      lockScroll();
+    } else {
+      unlockScroll();
+    }
   };
 
   // Scroll: adiciona classe is-scrolled
@@ -135,5 +156,37 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   // Acessibilidade: aria-pressed inicial
   grid.querySelectorAll('.horario-btn').forEach(btn => {
     btn.setAttribute('aria-pressed', 'false');
+  });
+})();
+
+/* ----------------------------------------------------------
+   PROCEDIMENTO CAROUSEL
+---------------------------------------------------------- */
+(function () {
+  document.querySelectorAll('[data-carousel]').forEach(function (carousel) {
+    const track   = carousel.querySelector('.procedimento-carousel__track');
+    const counter = carousel.querySelector('.carousel-nav__counter');
+    const btnPrev = carousel.querySelector('.carousel-arrow[aria-label="Anterior"]');
+    const btnNext = carousel.querySelector('.carousel-arrow[aria-label="Próximo"]');
+
+    if (!track || !btnPrev || !btnNext) return;
+
+    const cards = track.querySelectorAll('.procedimento-card');
+    const total = cards.length;
+    let current = 0;
+
+    function goTo(index) {
+      current = index;
+      track.style.transform = 'translateX(-' + (100 * current) + '%)';
+      if (counter) counter.textContent = (current + 1) + '/' + total;
+      btnPrev.disabled = current === 0;
+      btnNext.disabled = current === total - 1;
+    }
+
+    btnPrev.addEventListener('click', function () { if (current > 0) goTo(current - 1); });
+    btnNext.addEventListener('click', function () { if (current < total - 1) goTo(current + 1); });
+
+    // Estado inicial
+    goTo(0);
   });
 })();

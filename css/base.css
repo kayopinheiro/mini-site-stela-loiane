@@ -39,6 +39,23 @@ body {
   overflow-x: hidden;
 }
 
+body.menu-open {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+html.menu-open,
+body.menu-open {
+  overscroll-behavior: none;
+}
+
+html.menu-open {
+  overflow: hidden;
+}
+
 img, video {
   max-width: 100%;
   height: auto;

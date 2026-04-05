@@ -168,6 +168,25 @@ body.page_style-guide {
   margin-top: 8px;
 }
 
+.sg-pill-showcase {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-12);
+}
+
+.sg-procedimento-preview {
+  max-width: 375px;
+}
+
+.sg-procedimento-preview + .sg-procedimento-preview {
+  margin-top: var(--space-40);
+}
+
+.sg-faq-preview {
+  max-width: 375px;
+}
+
 .sg-navbar-preview,
 .component_navbar-preview {
   width: 100%;
