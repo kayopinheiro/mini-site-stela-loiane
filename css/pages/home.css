@@ -277,6 +277,20 @@ body.page_home {
   padding-right: var(--space-48);
 }
 
+.form-field__date-wrap .form-field__input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  cursor: pointer;
+  position: absolute;
+  right: var(--space-16);
+  width: 20px;
+  height: 20px;
+}
+
+.form-field__date-wrap .form-field__input::-webkit-clear-button,
+.form-field__date-wrap .form-field__input::-webkit-inner-spin-button {
+  display: none;
+}
+
 .form-field__icon {
   position: absolute;
   right: var(--space-16);
@@ -285,7 +299,7 @@ body.page_home {
   width: 20px;
   height: 20px;
   pointer-events: none;
-  opacity: 0.45;
+  opacity: 1;
   display: block;
 }
 

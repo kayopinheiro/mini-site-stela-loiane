@@ -160,6 +160,51 @@
 }
 
 /* ============================================================
+  1b) FLOATING ACTION — WHATSAPP
+  ============================================================ */
+
+.whatsapp-float {
+  position: fixed;
+  right: max(16px, calc((100vw - var(--app-shell-max-width)) / 2 + 16px));
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background-color: #25d366;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 10px 22px rgba(2, 2, 2, 0.14),
+    0 2px 8px rgba(2, 2, 2, 0.1);
+  z-index: 70;
+  transition: transform var(--transition-fast), box-shadow var(--transition-base), background-color var(--transition-base);
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe57;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow:
+    0 14px 28px rgba(2, 2, 2, 0.18),
+    0 4px 12px rgba(2, 2, 2, 0.12);
+}
+
+.whatsapp-float:active {
+  transform: scale(0.98);
+}
+
+.whatsapp-float:focus-visible {
+  outline: 2px solid var(--color-turquoise-chalk);
+  outline-offset: 3px;
+}
+
+.whatsapp-float img {
+  width: 38px;
+  height: 38px;
+  display: block;
+}
+
+/* ============================================================
   2) CARDS
   ============================================================ */
 

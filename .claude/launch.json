@@ -3,8 +3,8 @@
   "configurations": [
     {
       "name": "stela-loiane",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["serve", ".", "-p", "3000"],
+      "runtimeExecutable": "/usr/local/bin/node",
+      "runtimeArgs": ["/Users/kayopinheiro/Documents/00_Inbox/mini-site-stela-loiane/server.js"],
       "port": 3000
     }
   ]

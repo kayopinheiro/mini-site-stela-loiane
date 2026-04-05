@@ -190,3 +190,100 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     goTo(0);
   });
 })();
+
+/* ----------------------------------------------------------
+   AGENDAMENTO — redirecionamento para WhatsApp
+---------------------------------------------------------- */
+(function () {
+  const form = document.querySelector('.agendamento__form');
+  if (!form) return;
+
+  const telefoneInput = form.querySelector('[name="telefone"], [name="whatsapp"], #telefone');
+  const formatarCelular = (valor) => {
+    const digitos = String(valor || '').replace(/\D/g, '').slice(0, 11);
+    if (!digitos) return '';
+    if (digitos.length <= 2) return `(${digitos}`;
+    if (digitos.length <= 7) return `(${digitos.slice(0, 2)}) ${digitos.slice(2)}`;
+    return `(${digitos.slice(0, 2)}) ${digitos.slice(2, 7)}-${digitos.slice(7)}`;
+  };
+
+  if (telefoneInput) {
+    telefoneInput.addEventListener('input', () => {
+      telefoneInput.value = formatarCelular(telefoneInput.value);
+    });
+
+    telefoneInput.addEventListener('blur', () => {
+      telefoneInput.value = formatarCelular(telefoneInput.value);
+    });
+
+    telefoneInput.value = formatarCelular(telefoneInput.value);
+  }
+
+  const dataInput = form.querySelector('[name="data"]');
+  if (dataInput) {
+    const hoje = new Date();
+    const timezoneOffsetMs = hoje.getTimezoneOffset() * 60000;
+    const hojeLocalIso = new Date(hoje.getTime() - timezoneOffsetMs).toISOString().split('T')[0];
+    dataInput.setAttribute('min', hojeLocalIso);
+
+    const openDatePicker = () => {
+      if (typeof dataInput.showPicker === 'function') {
+        try {
+          dataInput.showPicker();
+        } catch (error) {
+          dataInput.focus();
+        }
+      } else {
+        dataInput.focus();
+      }
+    };
+
+    dataInput.addEventListener('click', openDatePicker);
+    dataInput.addEventListener('focus', openDatePicker);
+    dataInput.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        openDatePicker();
+      }
+    });
+
+    const dateWrap = dataInput.closest('.form-field__date-wrap');
+    if (dateWrap) {
+      dateWrap.addEventListener('click', (event) => {
+        if (event.target !== dataInput) {
+          openDatePicker();
+        }
+      });
+    }
+  }
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const getFieldValue = (selectors) => {
+      for (const selector of selectors) {
+        const field = form.querySelector(selector);
+        if (field && typeof field.value === 'string') {
+          return field.value.trim();
+        }
+      }
+      return '';
+    };
+
+    const nome = getFieldValue(['[name="nome"]', '#nome']);
+    const whatsapp = getFieldValue(['[name="whatsapp"]', '[name="telefone"]', '#telefone']);
+    const email = getFieldValue(['[name="email"]', '#email']);
+    const data = getFieldValue(['[name="data"]', '#data']);
+    const horarioSelecionado = form.querySelector('.horario-btn.is-selected');
+    const horario = horarioSelecionado ? horarioSelecionado.textContent.trim() : getFieldValue(['[name="horario"]', '#horario']);
+    const dataFormatada = /^\d{4}-\d{2}-\d{2}$/.test(data)
+      ? data.split('-').reverse().join('/')
+      : data;
+
+    const mensagem = `Olá! Gostaria de agendar um horário.\n\n------------------------\n\n*Nome:* ${nome}\n*WhatsApp:* ${whatsapp}\n*E-mail:* ${email}\n\n📅 *Data:* ${dataFormatada}\n⏰ *Horário:* ${horario}`;
+    const mensagemCodificada = encodeURIComponent(mensagem);
+    const urlWhatsapp = `https://wa.me/5511985129005?text=${mensagemCodificada}`;
+
+    window.location.href = urlWhatsapp;
+  });
+})();
