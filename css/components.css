@@ -673,12 +673,13 @@
 }
 
 .navbar__menu-overlay {
-  position: absolute;
+  position: fixed;
   top: 88px;
   left: 0;
   right: 0;
+  margin-inline: auto;
   width: 100%;
-  max-width: 100%;
+  max-width: var(--app-shell-max-width);
   min-height: calc(100dvh - 88px);
   background-color: rgba(2, 2, 2, 0.55);
   border: 0;
@@ -691,13 +692,14 @@
 /* Menu mobile */
 .navbar__mobile-menu {
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 88px;
   right: 0;
   bottom: auto;
   left: 0;
+  margin-inline: auto;
   width: 100%;
-  max-width: 100%;
+  max-width: var(--app-shell-max-width);
   background-color: rgba(2, 2, 2, 1);
   min-height: calc(100dvh - 88px);
   z-index: 99;
@@ -733,7 +735,7 @@
   }
 
   .navbar__mobile-menu {
-    left: auto;
+    left: 0;
     right: 0;
   }
 }
@@ -748,7 +750,7 @@
 
 .navbar__mobile-menu .navbar__link {
   width: 100%;
-  text-align: center;
+  text-align: left;
   color: var(--color-white);
   font-size: var(--font-h2);
   line-height: 1.1;

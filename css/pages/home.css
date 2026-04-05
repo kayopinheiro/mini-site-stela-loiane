@@ -89,6 +89,10 @@ body.page_home {
   gap: var(--space-16);
 }
 
+.hero__copy .tagline {
+  margin-bottom: 0;
+}
+
 .hero__title {
   font-family: var(--font-heading);
   font-size: var(--font-h1);
@@ -188,6 +192,18 @@ body.page_home {
 .servicos__title-accent {
   display: block;
   color: var(--color-advantageous);
+}
+
+.servicos .procedimento-group__pills {
+  margin-bottom: var(--space-24);
+}
+
+.servicos .procedimento-group {
+  margin-bottom: var(--space-32);
+}
+
+.servicos__cta {
+  margin-top: 0;
 }
 
 /* Cards */
