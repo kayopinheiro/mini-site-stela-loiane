@@ -293,6 +293,45 @@ body.page_home {
   padding-right: var(--space-48);
 }
 
+.form-field__date-wrap.is-empty .form-field__input {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  caret-color: transparent;
+}
+
+.form-field__date-wrap:not(.is-empty) .form-field__input {
+  color: var(--color-text);
+  -webkit-text-fill-color: var(--color-text);
+  caret-color: var(--color-text);
+}
+
+.form-field__date-wrap.is-empty .form-field__input::-webkit-datetime-edit {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-field__date-wrap.is-empty .form-field__input::-webkit-date-and-time-value {
+  opacity: 0;
+}
+
+.form-field__date-wrap:not(.is-empty) .form-field__input::-webkit-date-and-time-value {
+  opacity: 1;
+}
+
+.form-field__date-wrap.is-empty .form-field__input::-webkit-datetime-edit-fields-wrapper,
+.form-field__date-wrap.is-empty .form-field__input::-webkit-datetime-edit-text,
+.form-field__date-wrap.is-empty .form-field__input::-webkit-datetime-edit-month-field,
+.form-field__date-wrap.is-empty .form-field__input::-webkit-datetime-edit-day-field,
+.form-field__date-wrap.is-empty .form-field__input::-webkit-datetime-edit-year-field {
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-field__date-wrap:not(.is-empty) .form-field__input::-webkit-datetime-edit {
+  color: var(--color-text);
+  -webkit-text-fill-color: var(--color-text);
+}
+
 .form-field__date-placeholder {
   position: absolute;
   top: 50%;
@@ -305,7 +344,6 @@ body.page_home {
   transition: opacity var(--transition-fast);
 }
 
-.form-field__date-wrap.is-focused .form-field__date-placeholder,
 .form-field__date-wrap:not(.is-empty) .form-field__date-placeholder {
   opacity: 0;
 }

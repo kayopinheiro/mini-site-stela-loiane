@@ -248,11 +248,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     dataInput.addEventListener('click', openDatePicker);
     dataInput.addEventListener('focus', openDatePicker);
-    dataInput.addEventListener('focus', () => {
-      dateWrap?.classList.add('is-focused');
-    });
     dataInput.addEventListener('blur', () => {
-      dateWrap?.classList.remove('is-focused');
       syncDatePlaceholderState();
     });
     dataInput.addEventListener('input', syncDatePlaceholderState);
