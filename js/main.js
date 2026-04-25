@@ -294,7 +294,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
     const mensagem = `Olá! Gostaria de agendar um horário.\n\n------------------------\n\n*Nome:* ${nome}\n*WhatsApp:* ${whatsapp}\n*E-mail:* ${email}\n\n📅 *Data:* ${dataFormatada}\n⏰ *Horário:* ${horario}`;
     const mensagemCodificada = encodeURIComponent(mensagem);
-    const urlWhatsapp = `https://wa.me/5511985129005?text=${mensagemCodificada}`;
+    const urlWhatsapp = `https://wa.me/5511948715365?text=${mensagemCodificada}`;
 
     window.location.href = urlWhatsapp;
   });
